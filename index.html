@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hi !</title>
+    <link rel="icon" type="image/x-i.con" href="favicon.ico" />
+    <title>My Title</title>
+
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <div class="splash"><img src="Splash.jpg" /></div>
+  <body class="main">
+    <div>
+      <h1><b>Smart Abacus</b></h1>
+      <p>
+        عدد الارقام
+        <select class="select" name="list" size="1" id="number_digits">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+      </p>
+      <p>
+        عدد العمليات
+        <select
+          class="select"
+          name="list"
+          size="1"
+          id="number_operation"
+          disabled="disabled"
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+        </select>
+      </p>
+      <p>
+        الوقت
+        <select class="select" name="list" size="1" id="time">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected>3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+        </select>
+      </p>
+      <p>
+        الطرح
+        <input id="Checkbox" type="checkbox" onclick="checkSub();" />
+      </p>
+      <div class="slidecontainer">
+        <input
+          type="range"
+          min="1"
+          max="3"
+          value="1"
+          class="slider"
+          id="myRange"
+        />
+      </div>
+      <p>Level:<span id="demo"></span></p>
+      <p><input id="js-display" class="display" type="text" /></p>
+      <p>
+        <button class="start" onclick="start();">أبداء</button>
+        <button class="show-modal" onclick="submit();">الاجابة</button>
+        <button onclick="showAnswer();">اظهر الاجابة</button>
+      </p>
+
+      <p>Wrong Answers :<span id="wrongAns"> 0</span></p>
+      <p>Right Answers :<span id="rightAns"> 0</span></p>
+      <script src="./main.js" type="text/javascript"></script>
+    </div>
+    <div>
+      <link rel="stylesheet" type="text/css" href="abacus.css" />
+
+      <div id="canvasdiv">
+        <canvas id="canvas" width="1520" height="300">
+          Sorry, this application needs HTML5 canvas support, please upgrade you
+          browser, Thanks.
+        </canvas>
+      </div>
+
+      Number of Rods:
+      <select id="numberOfRods" class="select">
+        <option value="7" selected>7</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+      </select>
+      <input class="button" id="reset" type="button" value="Reset Abacus" />
+
+      <audio id="beadSound" src="clac.wav" style="display: none"></audio>
+
+      <script src="abacus.js"></script>
+    </div>
+  </body>
+</html>
